@@ -21,6 +21,6 @@ jobs:
           node-version: 18
           cache: "npm"
 
-      - run: git push
+      - run: npm ci
       - run: npm run test:ci
       - run: npm run build
