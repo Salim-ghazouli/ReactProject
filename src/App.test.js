@@ -15,7 +15,7 @@ test("navigate to register page", async () => {
   await userEvent.click(link);
 
   expect(
-    await screen.findByPlaceholderText(/,dlfd/i)
+    await screen.findByPlaceholderText(/asda/i)
   ).toBeInTheDocument();
 });
 
