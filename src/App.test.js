@@ -15,7 +15,7 @@ test("navigate to register page", async () => {
   await userEvent.click(link);
 
   expect(
-    await screen.findByPlaceholderText(/ slocom/i)
+    await screen.findByPlaceholderText(/ fsdf/i)
   ).toBeInTheDocument();
 });
 
