@@ -11,10 +11,21 @@ test("navigate to register page", async () => {
     </MemoryRouter>
   );
 
-  const link = screen.getByRole("link", { name: /register/i });
+  const link = screen.getByRole("link", { name: /home/i });
   await userEvent.click(link);
 
   expect(
-    await screen.findByPlaceholderText(/enter email/i)
+    await screen.findByPlaceholderText(/ slocom/i)
   ).toBeInTheDocument();
+});
+
+test("home page exists", () => {
+  render(
+    <MemoryRouter>
+      <App />
+    </MemoryRouter>
+  );
+
+  expect(screen.getByRole("heading", { name: /welcome to myapp/i })).toBeInTheDocument();
+  expect(screen.getByRole("link", { name: /register/i })).toBeInTheDocument();
 });

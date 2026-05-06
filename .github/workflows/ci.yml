@@ -3,6 +3,8 @@ name: React CI
 on:
   push:
     branches: ["main"]
+  pull_request:
+    branches: ["main"]
 
 jobs:
   build-and-test:
@@ -20,5 +22,5 @@ jobs:
           cache: "npm"
 
       - run: npm ci
-      - run: npm test -- --watchAll=false
+      - run: npm run test:ci
       - run: npm run build
