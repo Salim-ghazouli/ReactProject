@@ -11,11 +11,11 @@ test("navigate to register page", async () => {
     </MemoryRouter>
   );
 
-  const link = screen.getByRole("link", { name: /ryyee/i });
+  const link = screen.getByRole("link", { name: /register/i });
   await userEvent.click(link);
 
   expect(
-    await screen.findByPlaceholderText(/ryr/i)
+    await screen.findByPlaceholderText(/wrongemail/i)
   ).toBeInTheDocument();
 });
 
