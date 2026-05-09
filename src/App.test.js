@@ -17,7 +17,7 @@ test("navigate to register page", async () => {
   expect(
     await screen.findByPlaceholderText(/email/i)
   ).toBeInTheDocument();
-});
+});;
 
 test("home page exists", () => {
   render(
